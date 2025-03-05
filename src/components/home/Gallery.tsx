@@ -5,26 +5,27 @@ import { Button } from '@/components/ui/button';
 
 const Gallery = () => {
   const sectionRef = useRef<HTMLElement>(null);
+  const headingRef = useRef<HTMLHeadingElement>(null);
   const [activeImage, setActiveImage] = useState(0);
 
   const galleryImages = [
     {
-      src: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1000&auto=format&fit=crop",
+      src: "/lovable-uploads/e5e0569c-dd24-49c4-8fb2-fb1ba360fea3.png",
       alt: "Minecraft gameplay screenshot 1",
       caption: "Финальный матч сезона 3"
     },
     {
-      src: "https://images.unsplash.com/photo-1639252498000-c6d79d0fd1c4?q=80&w=1000&auto=format&fit=crop",
+      src: "/lovable-uploads/e5e0569c-dd24-49c4-8fb2-fb1ba360fea3.png",
       alt: "Minecraft gameplay screenshot 2",
       caption: "Строительство базы команды Dragons"
     },
     {
-      src: "https://images.unsplash.com/photo-1627856013091-fed6e4e30025?q=80&w=1000&auto=format&fit=crop",
+      src: "/lovable-uploads/e5e0569c-dd24-49c4-8fb2-fb1ba360fea3.png",
       alt: "Minecraft gameplay screenshot 3",
       caption: "Эпичное сражение на центральной платформе"
     },
     {
-      src: "https://images.unsplash.com/photo-1637984135921-301ab0f935d4?q=80&w=1000&auto=format&fit=crop",
+      src: "/lovable-uploads/e5e0569c-dd24-49c4-8fb2-fb1ba360fea3.png",
       alt: "Minecraft gameplay screenshot 4",
       caption: "Победное восхождение по столбу"
     }
@@ -45,9 +46,16 @@ const Gallery = () => {
       observer.observe(sectionRef.current);
     }
 
+    if (headingRef.current) {
+      observer.observe(headingRef.current);
+    }
+
     return () => {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
+      }
+      if (headingRef.current) {
+        observer.unobserve(headingRef.current);
       }
     };
   }, []);
@@ -61,14 +69,14 @@ const Gallery = () => {
   };
 
   return (
-    <section id="галерея" className="py-24 px-4 md:px-6 bg-white">
+    <section id="галерея" ref={sectionRef} className="py-24 px-4 md:px-6 bg-white">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <div className="inline-block bg-minecraft-accent/10 text-minecraft-accent font-medium rounded-full px-4 py-1.5 text-sm mb-3">
             Галерея
           </div>
           <h2 
-            ref={sectionRef} 
+            ref={headingRef} 
             className="animate-on-scroll text-3xl md:text-4xl font-bold tracking-tight mb-4"
           >
             Моменты турнира

@@ -36,12 +36,16 @@ const Hero = () => {
             </div>
           </div>
 
-          <h1 
-            className={`text-5xl md:text-6xl lg:text-7xl font-minecraft tracking-tight text-white transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 transform-none' : 'opacity-0 translate-y-8'}`}
+          <div
+            className={`w-full max-w-md transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 transform-none' : 'opacity-0 translate-y-8'}`}
             style={{ transitionDelay: '0.2s' }}
           >
-            DDM<span className="text-orange-500">Games</span>
-          </h1>
+            <img 
+              src="/lovable-uploads/e5e0569c-dd24-49c4-8fb2-fb1ba360fea3.png" 
+              alt="DDMGames Logo" 
+              className="w-full h-auto"
+            />
+          </div>
 
           <p 
             className={`text-xl md:text-2xl text-gray-300 max-w-2xl transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 transform-none' : 'opacity-0 translate-y-8'}`}
@@ -73,7 +77,7 @@ const Hero = () => {
                 </div>
               </div>
               <img 
-                src="https://images.unsplash.com/photo-1627856013091-fed6e4e30025?q=80&w=1000&auto=format&fit=crop" 
+                src="/lovable-uploads/e5e0569c-dd24-49c4-8fb2-fb1ba360fea3.png" 
                 alt="Minecraft blocks" 
                 className="w-full h-full object-cover object-center opacity-40"
               />

@@ -42,7 +42,7 @@ const AboutFeature = ({ icon: Icon, title, description }: { icon: any, title: st
 };
 
 const About = () => {
-  const sectionRef = useRef<HTMLElement>(null);
+  const sectionRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -121,7 +121,7 @@ const About = () => {
             <div className="relative">
               <div className="aspect-video rounded-lg overflow-hidden pixelated-border">
                 <img 
-                  src="https://images.unsplash.com/photo-1637984135921-301ab0f935d4?q=80&w=1000&auto=format&fit=crop" 
+                  src="/lovable-uploads/e5e0569c-dd24-49c4-8fb2-fb1ba360fea3.png" 
                   alt="Minecraft tournament" 
                   className="w-full h-full object-cover"
                 />
