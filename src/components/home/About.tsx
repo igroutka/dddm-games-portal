@@ -32,7 +32,7 @@ const AboutFeature = ({ icon: Icon, title, description }: { icon: any, title: st
       ref={featureRef} 
       className="animate-on-scroll p-6 bg-white rounded-xl shadow-sm border border-gray-100 flex flex-col items-start space-y-3 hover:shadow-md transition-shadow duration-200"
     >
-      <div className="p-3 bg-minecraft-primary/10 rounded-lg text-minecraft-primary">
+      <div className="p-3 bg-purple-500/10 rounded-lg text-purple-600">
         <Icon size={24} strokeWidth={2} />
       </div>
       <h3 className="text-lg font-semibold">{title}</h3>
@@ -70,7 +70,7 @@ const About = () => {
     <section id="о-турнире" className="py-24 px-4 md:px-6 bg-white">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <div className="inline-block bg-minecraft-accent/10 text-minecraft-accent font-medium rounded-full px-4 py-1.5 text-sm mb-3">
+          <div className="inline-block bg-purple-500/10 text-purple-600 font-medium rounded-full px-4 py-1.5 text-sm mb-3">
             О DDMGames
           </div>
           <h2 
@@ -107,7 +107,7 @@ const About = () => {
           />
         </div>
 
-        <div className="mt-20 bg-gradient-to-r from-minecraft-primary/5 to-minecraft-accent/5 rounded-2xl p-8 md:p-12">
+        <div className="mt-20 bg-gradient-to-r from-purple-500/5 to-pink-400/5 rounded-2xl p-8 md:p-12">
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div>
               <h3 className="text-2xl font-bold mb-4">История турнира</h3>
@@ -118,15 +118,7 @@ const About = () => {
                 Сегодня турнир объединяет игроков разного уровня мастерства, предлагая захватывающие матчи и незабываемые моменты для всех участников и зрителей.
               </p>
             </div>
-            <div className="relative">
-              <div className="aspect-video rounded-lg overflow-hidden pixelated-border">
-                <img 
-                  src="/lovable-uploads/e5e0569c-dd24-49c4-8fb2-fb1ba360fea3.png" 
-                  alt="Minecraft tournament" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
+            {/* Removed the bottom image as requested */}
           </div>
         </div>
       </div>

@@ -25,16 +25,16 @@
     --popover: 0 0% 15%;
     --popover-foreground: 0 0% 100%;
 
-    --primary: 24 100% 50%; /* Orange primary */
+    --primary: 270 70% 60%; /* Purple primary */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 24 30% 15%;
-    --secondary-foreground: 24 100% 50%;
+    --secondary: 270 30% 15%;
+    --secondary-foreground: 270 70% 60%;
 
     --muted: 0 0% 20%;
     --muted-foreground: 0 0% 70%;
 
-    --accent: 24 100% 50%; /* Orange accent */
+    --accent: 320 70% 65%; /* Pink accent */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -42,7 +42,7 @@
 
     --border: 0 0% 25%;
     --input: 0 0% 25%;
-    --ring: 24 100% 50%; /* Orange ring */
+    --ring: 320 70% 65%; /* Pink ring */
 
     --radius: 0.5rem;
   }
@@ -77,11 +77,11 @@
 
 @layer components {
   .hero-gradient {
-    background: linear-gradient(135deg, rgba(234, 88, 12, 0.1) 0%, rgba(251, 146, 60, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(147, 51, 234, 0.1) 0%, rgba(219, 39, 119, 0.1) 100%);
   }
   
   .pixelated-border {
-    box-shadow: 0 4px 0 rgba(255, 132, 0, 0.3);
+    box-shadow: 0 4px 0 rgba(192, 38, 211, 0.3);
     position: relative;
   }
   
@@ -92,12 +92,12 @@
     left: 0;
     right: 0;
     bottom: 0;
-    border: 2px solid rgba(255, 132, 0, 0.2);
+    border: 2px solid rgba(192, 38, 211, 0.2);
     pointer-events: none;
   }
   
   .minecraft-btn {
-    @apply inline-flex items-center justify-center rounded-md bg-orange-500 text-white font-minecraft tracking-wide pixelated-border transition-all duration-200 ease-in-out transform hover:translate-y-[-2px] hover:shadow-lg active:translate-y-[0px] active:shadow-md;
+    @apply inline-flex items-center justify-center rounded-md bg-purple-600 text-white font-minecraft tracking-wide pixelated-border transition-all duration-200 ease-in-out transform hover:translate-y-[-2px] hover:shadow-lg active:translate-y-[0px] active:shadow-md;
   }
   
   .glass-card {
