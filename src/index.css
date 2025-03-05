@@ -16,33 +16,33 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 210 20% 15%;
+    --background: 0 0% 10%; /* Dark background */
+    --foreground: 0 0% 100%; /* White text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 210 20% 15%;
+    --card: 0 0% 15%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 210 20% 15%;
+    --popover: 0 0% 15%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 142 40% 48%;
+    --primary: 24 100% 50%; /* Orange primary */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 24 30% 15%;
+    --secondary-foreground: 24 100% 50%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 24 100% 50%; /* Orange accent */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 142 40% 48%;
+    --border: 0 0% 25%;
+    --input: 0 0% 25%;
+    --ring: 24 100% 50%; /* Orange ring */
 
     --radius: 0.5rem;
   }
@@ -52,7 +52,7 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans overflow-x-hidden;
+    @apply bg-zinc-900 text-foreground font-sans overflow-x-hidden;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
@@ -62,26 +62,26 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.05);
   }
 
   ::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 4px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.3);
   }
 }
 
 @layer components {
   .hero-gradient {
-    background: linear-gradient(135deg, rgba(74, 174, 70, 0.2) 0%, rgba(92, 148, 252, 0.2) 100%);
+    background: linear-gradient(135deg, rgba(234, 88, 12, 0.1) 0%, rgba(251, 146, 60, 0.1) 100%);
   }
   
   .pixelated-border {
-    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 0 rgba(255, 132, 0, 0.3);
     position: relative;
   }
   
@@ -92,16 +92,16 @@
     left: 0;
     right: 0;
     bottom: 0;
-    border: 2px solid rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(255, 132, 0, 0.2);
     pointer-events: none;
   }
   
   .minecraft-btn {
-    @apply inline-flex items-center justify-center rounded-md bg-minecraft-primary text-white font-minecraft tracking-wide pixelated-border transition-all duration-200 ease-in-out transform hover:translate-y-[-2px] hover:shadow-lg active:translate-y-[0px] active:shadow-md;
+    @apply inline-flex items-center justify-center rounded-md bg-orange-500 text-white font-minecraft tracking-wide pixelated-border transition-all duration-200 ease-in-out transform hover:translate-y-[-2px] hover:shadow-lg active:translate-y-[0px] active:shadow-md;
   }
   
   .glass-card {
-    @apply bg-white/30 backdrop-blur-md border border-white/20 shadow-lg;
+    @apply bg-zinc-800/30 backdrop-blur-md border border-zinc-700/30 shadow-lg;
   }
 
   .animate-on-scroll {
