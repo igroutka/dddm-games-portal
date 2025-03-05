@@ -10,6 +10,10 @@ const Hero = () => {
     setIsVisible(true);
   }, []);
 
+  const handleRegistrationClick = () => {
+    window.open('https://qform.link/form_8OfyRqTxAY-9-sbkNnTZHX24sUY8RavZ', '_blank');
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-20 bg-zinc-900">
       {/* Background decoration */}
@@ -50,7 +54,10 @@ const Hero = () => {
             className={`flex flex-col sm:flex-row gap-4 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 transform-none' : 'opacity-0 translate-y-8'}`}
             style={{ transitionDelay: '0.4s' }}
           >
-            <Button className="minecraft-btn px-6 py-6 text-base bg-orange-500 hover:bg-orange-600">
+            <Button 
+              className="minecraft-btn px-6 py-6 text-base bg-orange-500 hover:bg-orange-600"
+              onClick={handleRegistrationClick}
+            >
               Регистрация на турнир
             </Button>
           </div>

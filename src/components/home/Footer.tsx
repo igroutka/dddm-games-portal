@@ -5,6 +5,10 @@ import { Button } from '@/components/ui/button';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
+  const handleRegistrationClick = () => {
+    window.open('https://qform.link/form_8OfyRqTxAY-9-sbkNnTZHX24sUY8RavZ', '_blank');
+  };
+
   return (
     <footer className="bg-zinc-950 text-white pt-16 pb-8 px-4 md:px-6">
       <div className="container mx-auto max-w-6xl">
@@ -36,7 +40,10 @@ const Footer = () => {
 
           <div>
             <h3 className="font-minecraft text-lg mb-6 text-orange-400">Регистрация</h3>
-            <Button className="minecraft-btn px-6 py-5 text-base w-full bg-orange-500 hover:bg-orange-600">
+            <Button 
+              className="minecraft-btn px-6 py-5 text-base w-full bg-orange-500 hover:bg-orange-600"
+              onClick={handleRegistrationClick}
+            >
               Регистрация на турнир
             </Button>
             

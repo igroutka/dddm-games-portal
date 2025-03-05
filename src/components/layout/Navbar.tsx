@@ -17,6 +17,10 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleRegistrationClick = () => {
+    window.open('https://qform.link/form_8OfyRqTxAY-9-sbkNnTZHX24sUY8RavZ', '_blank');
+  };
+
   return (
     <header 
       className={cn(
@@ -39,7 +43,7 @@ const Navbar = () => {
             <Button 
               variant="default" 
               className="minecraft-btn px-4 py-2 text-sm bg-orange-500 hover:bg-orange-600"
-              onClick={() => console.log('Регистрация!')}
+              onClick={handleRegistrationClick}
             >
               Регистрация
             </Button>
@@ -64,7 +68,7 @@ const Navbar = () => {
               variant="default" 
               className="minecraft-btn w-full py-2 text-sm bg-orange-500 hover:bg-orange-600"
               onClick={() => {
-                console.log('Регистрация!');
+                handleRegistrationClick();
                 setIsOpen(false);
               }}
             >
